@@ -1,0 +1,123 @@
+<html>
+<head>
+
+<style>
+.link { text-decoration:none;
+outline:none;
+font-size:25; 
+font-family:"Open Sans"; 
+letter-spacing:2px;
+color:black}
+.link:hover{
+background:lightgrey}
+
+
+
+#header1{
+height:75px;
+position:center;
+align:center;
+width:60%;
+margin-top:5px;
+background-color:FFE78D;
+font-family:'Open Sans';
+font-size:25px;
+text-align:center;
+line-height: 76px;
+letter-spacing:5px;
+}
+
+.headline
+{
+margin:30px;
+padding:4px;
+text-decoration:none;
+outline:none;
+font-size: 45;
+    position: relative;
+    margin: 0 5px;
+	color:black;
+	text-shadow:1px 1px lightgrey;
+	font-family:"Open sans"; 
+	letter-spacing:5px;
+}
+
+.menu_x.visible-xs-inline {
+    float: none;
+    font-size: 25px;
+    position: relative;
+    top: -2px;
+    margin: 0 5px;
+	color:white;
+	}
+	
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+	width:30%;
+
+
+}
+div.relative {
+    position: relative;
+    left: 30px;
+
+	width:35%
+}
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 30%;
+    width: 40%;
+    height: 100px;
+
+}
+</style>
+
+
+<script type="text/javascript">
+	 var n=0;
+	 var t=0.5; //seconds
+	 var picsrc=["images/main/1.png","images/main/1.1.png","images/main/1.png","images/main/1.1.png","images/main/1.png","images/main/2.png","images/main/3.png","images/main/4.png","images/main/5.png","images/main/6.png","images/main/7.png","images/main/8.png","images/main/9.png","images/main/10.png","images/main/11.png","images/main/12.png","images/main/11.png","images/main/12.png","images/main/11.png","images/main/12.png","images/main/11.png"];
+	 var pic=new Array();
+     for (i=0; i<picsrc.length;i++){
+     pic[i]=new Image();
+	 pic[i].src=picsrc[i];
+     }
+     function slideShow(){
+     n++;
+     if(n>picsrc.length-1){
+     n=0;
+     }
+     document.images["tool"].src=pic[n].src;
+     setTimeout("slideShow()",1000*t);
+     }
+     </script>
+	 
+	 
+</head>
+<body onload="slideShow()">
+<center> 
+
+<table width="90%">
+<tr>
+<td>
+
+<img src="images/minimal1.jpg" width="20%" >
+<div class="absolute">
+<CENTER><img src="1.png" name="tool" width="110%" </CENTER>
+</div>
+
+</td>
+</tr>
+</table>
+
+<div class="fixed">
+<img src="images/minimal4.jpg" width="100%">
+</div>
+
+
+</center>
+</body>
+</html>
